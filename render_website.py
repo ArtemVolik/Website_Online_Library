@@ -28,7 +28,7 @@ def make_page_content(quantity_on_page: int, books: list, template, directory):
 
         # for git pages
         if page == 1:
-            page_path = os.path.join(directory, 'index.html')
+            page_path = 'index.html'
             with open(page_path, 'w', encoding="utf8") as file:
                 file.write(rendered_page)
 
