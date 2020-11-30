@@ -1,9 +1,11 @@
 # Сайт онлайн библиотеки
 Создан как офлайн интерфейс для использования контента онлайн библиотеки, которая была собрана [вот этим скриптом](https://github.com/ArtemVolik/online_library).
+## Интерфейс
+**Посмотреть как выглядит интерфейс можно [по ссылке](https://artemvolik.github.io/Website_Online_Library/pages/index1.html).**
 ### Как работает 
-Работает с контентом предоставленным парсером. Подробнее [тут](https://github.com/ArtemVolik/online_library/blob/master/README.md).   
-Посмотреть как выглядит интерфейс можно [тут](https://artemvolik.github.io/Website_Online_Library/pages/index1.html).
+Работает с контентом предоставленным парсером. Подробнее [тут](https://github.com/ArtemVolik/online_library/blob/master/README.md).
 Проект создан в учебных целях.
+
 
 ## Установка для пользователя
 1. Скопировать папки `books`, `images`, `pages`, `static`.
