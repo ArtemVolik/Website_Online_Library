@@ -26,12 +26,6 @@ def make_page_content(quantity_on_page: int, books: list, template, directory):
         rendered_page = template.render(books=books_separated_to_columns, current_page=page, pages_quantity=len(books_on_pages))
         write_page(rendered_page, page, directory)
 
-        # for git pages
-        if page == 1:
-            page_path = os.path.join(directory, 'index.html')
-            with open(page_path, 'w', encoding="utf8") as file:
-                file.write(rendered_page)
-
 
 def on_reload():
     env = Environment(
