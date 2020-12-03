@@ -21,8 +21,9 @@ def write_page(rendered_page, page_number, folder):
 
 def make_page_content(quantity_on_page: int, books: list, template, directory):
     books_on_pages = list(chunked(books, quantity_on_page))
+    columns_quantity = 2
     for page, books_on_page in enumerate(books_on_pages, 1):
-        books_separated_to_columns = list(chunked(books_on_page, 2))
+        books_separated_to_columns = list(chunked(books_on_page, columns_quantity))
         rendered_page = template.render(books=books_separated_to_columns, current_page=page, pages_quantity=len(books_on_pages))
         write_page(rendered_page, page, directory)
 
