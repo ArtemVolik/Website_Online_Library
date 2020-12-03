@@ -3,6 +3,7 @@ import os
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from more_itertools import chunked
 from dotenv import load_dotenv
+from livereload import Server
 
 
 
@@ -45,4 +46,6 @@ def on_reload():
 
 if __name__ == "__main__":
     on_reload()
-
+    server = Server()
+    server.watch('template.html', on_reload)
+    server.serve(host='127.0.0.1', port=5050)
