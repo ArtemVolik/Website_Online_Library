@@ -34,11 +34,7 @@ def on_reload():
     )
 
     load_dotenv()
-    if os.getenv('SOURCE_JSON'):
-        source = os.getenv('SOURCE_JSON')
-    else:
-        source = 'books_info.json'
-
+    os.getenv('SOURCE_JSON', default='SOURCE_JSON')
     directory = 'pages'
     template = env.get_template('template.html')
     books = get_list_from_json(source)
